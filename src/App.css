@@ -1,4 +1,78 @@
+:root {
+  --bg-primary: #fef8ff;
+  --bg-mid: #f5f7ff;
+  --bg-accent: #fff0f5;
+  --blue-primary: #6b7db3;
+  --blue-light: #b0c4de;
+  --pink-primary: #d4a0b0;
+  --pink-light: #ffb6c1;
+  --text-heading: #2c3e6b;
+  --text-body: #9b8ea8;
+  --white: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-mid) 50%, var(--bg-accent) 100%);
+  min-height: 100vh;
+  color: var(--text-body);
+}
+
+.app {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(107, 125, 179, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(107, 125, 179, 0.15);
+}
+
+.section {
+  padding: 80px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--text-heading);
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
