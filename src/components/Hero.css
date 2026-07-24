@@ -1,0 +1,90 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(176,196,222,0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(255,182,193,0.15) 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-mid) 100%);
+}
+
+.hero__fabric {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hero__subtitle {
+  font-size: 11px;
+  letter-spacing: 8px;
+  color: var(--blue-light);
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0 0 16px;
+}
+
+.hero__names {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(36px, 8vw, 52px);
+  line-height: 1.1;
+  margin: 0;
+  background: linear-gradient(135deg, var(--blue-primary), #c8a2c8, var(--pink-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__ampersand {
+  display: block;
+  font-size: clamp(24px, 5vw, 32px);
+  font-style: normal;
+  margin: 8px 0;
+  background: linear-gradient(135deg, var(--pink-primary), var(--blue-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__date {
+  margin-top: 20px;
+  padding: 8px 24px;
+  border: 1px solid rgba(180,200,255,0.4);
+  border-radius: 30px;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: var(--text-body);
+  display: inline-block;
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-body);
+  opacity: 0.5;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+@media (max-width: 768px) {
+  .hero__subtitle {
+    letter-spacing: 4px;
+    font-size: 10px;
+  }
+}
