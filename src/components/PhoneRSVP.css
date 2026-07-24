@@ -1,0 +1,51 @@
+.rsvp {
+  text-align: center;
+}
+
+.rsvp__message {
+  max-width: 500px;
+  margin: 0 auto 32px;
+  color: var(--text-body);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.rsvp__buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rsvp__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--text-heading);
+  background:
+    linear-gradient(var(--white), var(--white)) padding-box,
+    linear-gradient(135deg, var(--blue-primary), var(--pink-primary)) border-box;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rsvp__button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(212,160,176,0.3);
+}
+
+.rsvp__button svg {
+  stroke: var(--blue-primary);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .rsvp__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
