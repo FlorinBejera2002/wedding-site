@@ -1,5 +1,29 @@
+import ParticleCanvas from './components/ParticleCanvas'
+import Hero from './components/Hero'
+import WaveDivider from './components/WaveDivider'
+import Countdown from './components/Countdown'
+import EventDetails from './components/EventDetails'
+import PhoneRSVP from './components/PhoneRSVP'
+import Gallery from './components/Gallery'
+import Footer from './components/Footer'
+
 function App() {
-  return <div className="app">Hello Wedding</div>
+  return (
+    <div className="app">
+      <ParticleCanvas />
+      <Hero />
+      <WaveDivider />
+      <Countdown />
+      <WaveDivider flip />
+      <EventDetails />
+      <WaveDivider />
+      <PhoneRSVP />
+      <WaveDivider flip />
+      <Gallery />
+      <WaveDivider />
+      <Footer />
+    </div>
+  )
 }
 
 export default App
