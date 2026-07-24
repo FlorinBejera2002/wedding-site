@@ -1,0 +1,26 @@
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.wave-divider svg {
+  width: calc(100% + 100px);
+  margin-left: -50px;
+  display: block;
+}
+
+.wave-divider--flip {
+  transform: rotate(180deg);
+}
+
+@keyframes wave-drift {
+  0% { transform: translateX(-50px); }
+  100% { transform: translateX(0); }
+}
+
+.wave-path {
+  animation: wave-drift 15s ease-in-out infinite alternate;
+}
