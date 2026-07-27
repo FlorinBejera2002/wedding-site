@@ -1,53 +1,66 @@
 .countdown {
+  padding-top: clamp(130px, 16vw, 190px);
   text-align: center;
 }
 
 .countdown__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  max-width: 600px;
+  gap: clamp(10px, 2vw, 22px);
+  max-width: 760px;
   margin: 0 auto;
 }
 
 .countdown__card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(26px, 4vw, 42px) 14px;
   text-align: center;
-  padding: 24px 16px;
+}
+
+.countdown__card::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
 }
 
 .countdown__number {
   display: block;
-  font-size: 48px;
   color: var(--text-heading);
-  font-weight: 200;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 7vw, 68px);
+  font-weight: 400;
   line-height: 1;
-  transition: opacity 0.3s ease;
 }
 
 .countdown__label {
   display: block;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  margin-top: 12px;
   color: var(--text-body);
-  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
 }
 
 .countdown__expired h2 {
-  font-size: 32px;
+  font-size: clamp(38px, 6vw, 60px);
 }
 
 .countdown__heart {
-  font-size: 48px;
   display: block;
   margin-bottom: 16px;
+  color: var(--rose);
+  font-size: 48px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .countdown__grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .countdown__number {
-    font-size: 36px;
   }
 }

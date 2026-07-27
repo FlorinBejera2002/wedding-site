@@ -9,7 +9,7 @@ const CameraIcon = () => (
 )
 
 const galleryItems: Array<{ type: 'photo'; src: string; alt: string } | { type: 'placeholder' }> = [
-  { type: 'photo', src: '/photos/couple-1.jpg', alt: 'Florin și Eva' },
+  { type: 'photo', src: '/photos/couple-1.jpeg', alt: 'Florin și Eva' },
   { type: 'placeholder' },
   { type: 'placeholder' },
   { type: 'placeholder' },
@@ -20,17 +20,19 @@ const galleryItems: Array<{ type: 'photo'; src: string; alt: string } | { type: 
 export default function Gallery() {
   return (
     <section className="gallery section">
-      <ScrollReveal><h2>Galerie foto</h2></ScrollReveal>
+      <ScrollReveal><h2>Povestea noastră</h2></ScrollReveal>
       <div className="gallery__grid">
         {galleryItems.map((item, i) => (
           <ScrollReveal key={i} delay={i * 0.1}>
             {item.type === 'photo' ? (
-              <div className="gallery__item gallery__item--photo">
+              <figure className="gallery__item gallery__item--photo">
                 <img src={item.src} alt={item.alt} />
-              </div>
+                <figcaption>Florin & Eva</figcaption>
+              </figure>
             ) : (
               <div className="gallery__item gallery__item--placeholder" role="img" aria-label="Fotografie placeholder">
                 <CameraIcon />
+                <span>În curând</span>
               </div>
             )}
           </ScrollReveal>

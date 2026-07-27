@@ -14,15 +14,13 @@ function App() {
       <FloralFrame />
       <ParticleCanvas />
       <Hero />
-      <WaveDivider />
-      <Countdown />
-      <WaveDivider flip />
-      <EventDetails />
-      <WaveDivider />
-      <PhoneRSVP />
-      <WaveDivider flip />
-      <Gallery />
-      <WaveDivider />
+      <main>
+        <WaveDivider />
+        <Countdown />
+        <EventDetails />
+        <Gallery />
+        <PhoneRSVP />
+      </main>
       <Footer />
     </div>
   )

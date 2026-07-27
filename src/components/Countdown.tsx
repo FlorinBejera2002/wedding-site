@@ -8,7 +8,7 @@ export default function Countdown() {
 
   if (isExpired) {
     return (
-      <section className="countdown section">
+      <section className="countdown section" id="countdown">
         <ScrollReveal>
           <div className="countdown__expired">
             <span className="countdown__heart">❤</span>
@@ -27,9 +27,9 @@ export default function Countdown() {
   ]
 
   return (
-    <section className="countdown section">
+    <section className="countdown section" id="countdown">
       <ScrollReveal>
-        <h2>Numărătoare inversă</h2>
+        <h2>Până la ziua noastră</h2>
       </ScrollReveal>
       <div className="countdown__grid" role="timer" aria-live="polite">
         {units.map((unit, i) => (

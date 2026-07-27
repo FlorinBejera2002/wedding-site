@@ -9,34 +9,55 @@
 .floral-frame__corner {
   position: absolute;
   display: block;
-  width: clamp(150px, 22vw, 250px);
-  height: auto;
+  width: clamp(250px, 30vw, 350px);
+  aspect-ratio: 4 / 5;
   opacity: 0;
   animation: frame-fade-in 3s ease-out 0.5s forwards;
+}
+
+.floral-frame__flower {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.floral-frame__flower--mask {
+  z-index: 0;
+  filter:
+    brightness(0) invert(1)
+    drop-shadow(0 0 0 #fef8ff)
+    drop-shadow(1px 0 0 #fef8ff)
+    drop-shadow(-1px 0 0 #fef8ff)
+    drop-shadow(0 1px 0 #fef8ff)
+    drop-shadow(0 -1px 0 #fef8ff)
+    drop-shadow(0 0 5px rgba(254, 248, 255, 0.95));
 }
 
 .floral-frame__corner--tl {
   top: 0;
   left: 0;
-  transform: translate(calc(-12% + 0px), calc(-7% + 8px)) scale(-1, -1);
+  transform: translate(calc(-12% + 0px), calc(-7% + 12px)) scale(-1, -1);
 }
 
 .floral-frame__corner--tr {
   top: 0;
   right: 0;
-  transform: translate(calc(6% + 10px), calc(-7% + 8px)) scale(1, -1);
+  transform: translate(calc(6% + 10px), calc(-7% + 12px)) scale(1, -1);
 }
 
 .floral-frame__corner--bl {
   bottom: 0;
   left: 0;
-  transform: translate(calc(-12% + 0px), calc(7% - 8px)) scale(-1, 1);
+  transform: translate(calc(-12% + 0px), calc(7% - 12px)) scale(-1, 1);
 }
 
 .floral-frame__corner--br {
   bottom: 0;
   right: 0;
-  transform: translate(calc(6% + 10px), calc(7% - 8px));
+  transform: translate(calc(6% + 10px), calc(7% - 12px));
 }
 
 @keyframes frame-fade-in {
@@ -47,7 +68,7 @@
 /* ── Mobile ── */
 @media (max-width: 480px) {
   .floral-frame__corner {
-    width: 110px;
+    width: 200px;
   }
 }
 

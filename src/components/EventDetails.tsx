@@ -25,37 +25,39 @@ export default function EventDetails() {
       <div className="events__grid">
         <ScrollReveal delay={0.1}>
           <div className="glass-card events__card">
+            <span className="events__number">01</span>
             <div className="events__icon"><ChurchIcon /></div>
             <h3 className="events__name">Cununia religioasă</h3>
             <p className="events__venue">{ceremony.name}</p>
             <div className="events__details">
               <p className="events__detail">
-                <span className="events__detail-icon">🕐</span> {ceremony.time}
+                <span className="events__detail-label">Ora</span> {ceremony.time}
               </p>
               <p className="events__detail">
-                <span className="events__detail-icon">📍</span> {ceremony.address}
+                <span className="events__detail-label">Loc</span> {ceremony.address}
               </p>
             </div>
             <a href={ceremony.mapsUrl} target="_blank" rel="noopener noreferrer" className="events__link">
-              Vezi pe hartă
+              Vezi pe hartă <span aria-hidden="true">↗</span>
             </a>
           </div>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <div className="glass-card events__card">
+            <span className="events__number">02</span>
             <div className="events__icon"><CelebrationIcon /></div>
             <h3 className="events__name">Recepția</h3>
             <p className="events__venue">{reception.name}</p>
             <div className="events__details">
               <p className="events__detail">
-                <span className="events__detail-icon">🕐</span> {reception.time}
+                <span className="events__detail-label">Ora</span> {reception.time}
               </p>
               <p className="events__detail">
-                <span className="events__detail-icon">📍</span> {reception.address}
+                <span className="events__detail-label">Loc</span> {reception.address}
               </p>
             </div>
             <a href={reception.mapsUrl} target="_blank" rel="noopener noreferrer" className="events__link">
-              Vezi pe hartă
+              Vezi pe hartă <span aria-hidden="true">↗</span>
             </a>
           </div>
         </ScrollReveal>

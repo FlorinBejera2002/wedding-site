@@ -12,7 +12,7 @@ export default function PhoneRSVP() {
   return (
     <section className="rsvp section">
       <ScrollReveal>
-        <h2>Confirmă prezența</h2>
+        <h2>Ne vedem acolo?</h2>
       </ScrollReveal>
       <ScrollReveal delay={0.1}>
         <p className="rsvp__message">

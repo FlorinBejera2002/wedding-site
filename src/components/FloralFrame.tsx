@@ -1,12 +1,16 @@
 import './FloralFrame.css'
 
 export default function FloralFrame() {
+  const corners = ['tl', 'tr', 'bl', 'br']
+
   return (
     <div className="floral-frame" aria-hidden="true">
-      <img className="floral-frame__corner floral-frame__corner--tl" src="/corner-flower.svg" alt="" draggable={false} />
-      <img className="floral-frame__corner floral-frame__corner--tr" src="/corner-flower.svg" alt="" draggable={false} />
-      <img className="floral-frame__corner floral-frame__corner--bl" src="/corner-flower.svg" alt="" draggable={false} />
-      <img className="floral-frame__corner floral-frame__corner--br" src="/corner-flower.svg" alt="" draggable={false} />
+      {corners.map((corner) => (
+        <span key={corner} className={`floral-frame__corner floral-frame__corner--${corner}`}>
+          <img className="floral-frame__flower floral-frame__flower--mask" src="/corner-flower.svg" alt="" draggable={false} />
+          <img className="floral-frame__flower" src="/corner-flower.svg" alt="" draggable={false} />
+        </span>
+      ))}
     </div>
   )
 }

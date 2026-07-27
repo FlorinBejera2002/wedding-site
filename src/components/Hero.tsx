@@ -18,6 +18,7 @@ export default function Hero() {
       </div>
 
       <div className="hero__content">
+        <p className="hero__eyebrow">Vă invităm să sărbătoriți alături de noi</p>
         <h1 className="hero__names">
           <span className="hero__name hero__name--groom">{WEDDING_CONFIG.groomName}</span>
           <span className="hero__amp">&</span>
@@ -30,6 +31,10 @@ export default function Hero() {
           <div className="hero__date-year">{year}</div>
           <div className="hero__date-line" />
         </div>
+        <a className="hero__scroll" href="#countdown" aria-label="Descoperă invitația">
+          <span>Descoperă invitația</span>
+          <i aria-hidden="true" />
+        </a>
       </div>
     </section>
   )

@@ -1,64 +1,97 @@
 .events__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  align-items: stretch;
+  gap: clamp(20px, 4vw, 42px);
+}
+
+.events__grid > div {
+  height: 100%;
 }
 
 .events__card {
-  padding: 32px;
+  position: relative;
+  height: 100%;
+  padding: clamp(36px, 6vw, 62px) clamp(24px, 5vw, 48px);
   text-align: center;
 }
 
+.events__number {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: .12em;
+}
+
 .events__icon {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.events__icon svg {
+  width: 56px;
+  height: 56px;
+  stroke: var(--sage-dark);
 }
 
 .events__name {
-  font-family: Georgia, 'Times New Roman', serif;
+  margin: 0 0 12px;
   color: var(--text-heading);
-  font-size: 20px;
-  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 400;
 }
 
 .events__venue {
+  margin: 0 0 28px;
   color: var(--text-body);
-  font-size: 15px;
-  margin: 0 0 16px;
-  font-style: italic;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .events__details {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  padding: 20px 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .events__detail {
-  color: var(--text-body);
-  font-size: 14px;
-  margin: 6px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
+  margin: 9px 0;
+  color: var(--text-body);
+  font-size: 15px;
 }
 
-.events__detail-icon {
-  font-size: 16px;
+.events__detail-label {
+  color: var(--sage-dark);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
 }
 
 .events__link {
   display: inline-block;
-  padding: 10px 24px;
-  border-radius: 30px;
-  font-size: 14px;
+  padding: 12px 4px 8px;
+  border-bottom: 1px solid var(--sage);
+  color: var(--sage-dark);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .08em;
   text-decoration: none;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--blue-primary), var(--pink-primary));
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  transition: color .3s ease, transform .3s ease;
 }
 
 .events__link:hover {
+  color: var(--rose);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(107,125,179,0.2);
 }
 
 @media (max-width: 768px) {

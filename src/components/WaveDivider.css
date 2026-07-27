@@ -4,12 +4,14 @@
   line-height: 0;
   position: relative;
   z-index: 1;
+  margin-top: -110px;
 }
 
 .wave-divider svg {
   width: calc(100% + 100px);
   margin-left: -50px;
   display: block;
+  height: 120px;
 }
 
 .wave-divider--flip {
