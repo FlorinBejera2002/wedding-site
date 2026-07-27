@@ -1,4 +1,5 @@
 import ParticleCanvas from './components/ParticleCanvas'
+import FloralFrame from './components/FloralFrame'
 import Hero from './components/Hero'
 import WaveDivider from './components/WaveDivider'
 import Countdown from './components/Countdown'
@@ -10,6 +11,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <div className="app">
+      <FloralFrame />
       <ParticleCanvas />
       <Hero />
       <WaveDivider />

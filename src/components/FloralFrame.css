@@ -1,0 +1,59 @@
+.floral-frame {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floral-frame__corner {
+  position: absolute;
+  display: block;
+  width: clamp(150px, 22vw, 250px);
+  height: auto;
+  opacity: 0;
+  animation: frame-fade-in 3s ease-out 0.5s forwards;
+}
+
+.floral-frame__corner--tl {
+  top: 0;
+  left: 0;
+  transform: translate(calc(-12% + 0px), calc(-7% + 8px)) scale(-1, -1);
+}
+
+.floral-frame__corner--tr {
+  top: 0;
+  right: 0;
+  transform: translate(calc(6% + 10px), calc(-7% + 8px)) scale(1, -1);
+}
+
+.floral-frame__corner--bl {
+  bottom: 0;
+  left: 0;
+  transform: translate(calc(-12% + 0px), calc(7% - 8px)) scale(-1, 1);
+}
+
+.floral-frame__corner--br {
+  bottom: 0;
+  right: 0;
+  transform: translate(calc(6% + 10px), calc(7% - 8px));
+}
+
+@keyframes frame-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .floral-frame__corner {
+    width: 110px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floral-frame__corner {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
