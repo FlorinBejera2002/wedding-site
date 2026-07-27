@@ -1,4 +1,5 @@
 import './Hero.css'
+import FloralFrame from './FloralFrame'
 import { WEDDING_CONFIG } from '../config'
 
 export default function Hero() {
@@ -16,6 +17,7 @@ export default function Hero() {
         <div className="hero__drape hero__drape--left" />
         <div className="hero__drape hero__drape--right" />
       </div>
+      <FloralFrame />
 
       <div className="hero__content">
         <p className="hero__eyebrow">Vă invităm să sărbătoriți alături de noi</p>

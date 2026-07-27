@@ -1,7 +1,7 @@
 .floral-frame {
-  position: fixed;
+  position: absolute;
   inset: 0;
-  z-index: 100;
+  z-index: 3;
   pointer-events: none;
   overflow: hidden;
 }
@@ -68,7 +68,7 @@
 /* ── Mobile ── */
 @media (max-width: 480px) {
   .floral-frame__corner {
-    width: 200px;
+    width: 180px;
   }
 }
 
